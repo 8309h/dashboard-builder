@@ -1,0 +1,152 @@
+:root {
+
+      --primary: #2563eb;
+
+      --background: #f8fafc;
+
+      --surface: #ffffff;
+
+      --border: #e5e7eb;
+
+      --text: #111827;
+
+      --sidebar-width: 260px;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--background);
+      color: var(--text);
+}
+
+/* ------------------ */
+/* TOPBAR */
+/* ------------------ */
+
+.topbar {
+
+      height: 64px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+
+      padding: 0 24px;
+
+      background: var(--surface);
+
+      border-bottom: 1px solid var(--border);
+}
+
+.brand {
+
+      font-size: 18px;
+
+      font-weight: 600;
+}
+
+.topbar-actions {
+
+      display: flex;
+
+      gap: 12px;
+}
+
+.topbar button {
+
+      border: none;
+
+      cursor: pointer;
+
+      padding: 10px 16px;
+
+      border-radius: 8px;
+
+      background: var(--primary);
+
+      color: white;
+}
+
+/* ------------------ */
+/* MAIN LAYOUT */
+/* ------------------ */
+
+.editor-layout {
+
+      display: flex;
+
+      height: calc(100vh - 64px);
+}
+
+/* ------------------ */
+/* SIDEBAR */
+/* ------------------ */
+
+.sidebar {
+
+      width: var(--sidebar-width);
+
+      background: white;
+
+      border-right: 1px solid var(--border);
+
+      padding: 20px;
+}
+
+.sidebar h3 {
+
+      margin-bottom: 20px;
+}
+
+.sidebar button {
+
+      width: 100%;
+
+      margin-bottom: 12px;
+
+      padding: 12px;
+
+      border: 1px solid var(--border);
+
+      background: white;
+
+      cursor: pointer;
+
+      border-radius: 8px;
+
+      text-align: left;
+
+      transition: .2s;
+}
+
+.sidebar button:hover {
+
+      background: #eff6ff;
+}
+
+/* ------------------ */
+/* CANVAS */
+/* ------------------ */
+
+#dashboard {
+
+      flex: 1;
+
+      position: relative;
+
+      overflow: auto;
+
+      background-image:
+            linear-gradient(#e5e7eb 1px, transparent 1px),
+            linear-gradient(90deg, #e5e7eb 1px, transparent 1px);
+
+      background-size: 20px 20px;
+}
