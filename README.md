@@ -101,3 +101,7 @@ Notes
 - The frontend uses relative API paths from `frontend/js/api.js`.
 - Saved layout JSON is stored as an `elements` array, not raw DOM or widget chrome.
 - If there is no saved layout, the app loads a friendly default starter layout.
+
+Output
+
+![Output](screenshot/Screenshot%202026-06-25%20174910.png)
