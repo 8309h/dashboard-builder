@@ -1,0 +1,17 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /dashboard-builder/
+
+  # If the request is for a real file or directory, skip rewriting
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Redirect root and directory requests to frontend
+  RewriteRule ^$ frontend/index.html [L]
+  RewriteRule ^index\.php$ frontend/index.html [L]
+</IfModule>
+
+# Ensure PHP can execute
+<FilesMatch "\.php$">
+  Allow from all
+</FilesMatch>

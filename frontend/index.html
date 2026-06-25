@@ -10,56 +10,49 @@
 </head>
 
 <body>
-
       <header class="topbar">
-
-            <div class="brand">
-                  Dashboard Builder
+            <div class="brand">Dashboard Builder</div>
+            <div class="toolbar-actions">
+                  <button id="undoBtn" class="secondary">Undo</button>
+                  <button id="redoBtn" class="secondary">Redo</button>
+                  <button id="previewBtn">Preview</button>
+                  <button id="saveLayoutBtn">Save Layout</button>
             </div>
-
-            <div class="topbar-actions">
-
-                  <button id="previewBtn">
-                        Preview
-                  </button>
-
-                  <button id="saveLayoutBtn">
-                        Save Layout
-                  </button>
-
-            </div>
-
       </header>
 
       <div class="editor-layout">
-
             <aside class="sidebar">
-
-                  <h3>Components</h3>
-
-                  <button id="addTextBtn">
-                        Text Widget
-                  </button>
-
-                  <button id="addImageBtn">
-                        Image Widget
-                  </button>
-
-                  <button id="addGraphBtn">
-                        Chart Widget
-                  </button>
-
+                  <div class="sidebar-header">
+                        <h3>Add Elements</h3>
+                        <p>Use the buttons below to add widgets to the canvas.</p>
+                  </div>
+                  <div class="quick-actions">
+                        <button type="button" id="addTextBtn">Add Text</button>
+                        <button type="button" id="addImageBtn">Add Image</button>
+                        <button type="button" id="addChartBtn">Add Chart</button>
+                        <button type="button" id="newCreationBtn">New Creation</button>
+                  </div>
             </aside>
 
-            <main id="dashboard">
-
+            <main class="canvas-shell">
+                  <section id="dashboard" class="canvas-frame">
+                        <div class="canvas-grid"></div>
+                        <canvas id="fabricCanvas"></canvas>
+                  </section>
             </main>
 
+            <aside class="property-panel">
+                  <h3>Properties</h3>
+                  <div id="propertyContent" class="property-content">
+                        <p>Select an element to edit its content, size, and style.</p>
+                  </div>
+            </aside>
       </div>
 
-      <script src="./js/app.js"></script>
-      <script src="./js/drag.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.2.4/fabric.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
       <script src="./js/api.js"></script>
+      <script src="./js/app.js"></script>
 
 </body>
 
